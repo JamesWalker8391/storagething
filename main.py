@@ -7,7 +7,7 @@ from functools import wraps
 UPLOAD_DIR = "uploads"
 DB_FILE = "app.db"
 SECRET_KEY = os.urandom(24)
-BASE_URL = "http://localhost:8080"  # change to your public domain when deploying
+BASE_URL = "https://storagething.onrender.com"  # change to your public domain when deploying
 
 os.makedirs(UPLOAD_DIR, exist_ok=True)
 app = Flask(__name__)
@@ -241,3 +241,4 @@ def public_file(filename):
 
 if __name__=="__main__":
     app.run(host="0.0.0.0", port=8080)
+
